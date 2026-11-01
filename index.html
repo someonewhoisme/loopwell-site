@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Loopwell privacy policy, community guidelines and support.">
+<style>:root{color-scheme:light}body{margin:0}img{max-width:100%}</style>
+<title>Loopwell Privacy &amp; Support</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: a single reading column with a sticky section switcher; the "Loop" ring is the one brand moment, everything else stays quiet */
+:root {
+  --bg: #f7f5fb;
+  --surface: #ffffff;
+  --fg: #1b1724;
+  --muted: #5d5670;
+  --line: #e2ddec;
+  --accent: #7a35e8;
+  --accent-soft: #efe6fd;
+  --display: "Sora", "Avenir Next", system-ui, sans-serif;
+  --body: "Figtree", system-ui, -apple-system, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0c0a11; --surface: #15121d; --fg: #ece8f4; --muted: #a39cb6;
+    --line: #2a2536; --accent: #b388ff; --accent-soft: #241a38; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0c0a11; --surface: #15121d; --fg: #ece8f4; --muted: #a39cb6;
+  --line: #2a2536; --accent: #b388ff; --accent-soft: #241a38; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg);
+  font: 17px/1.65 var(--body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 72px;
+}
+.wrap { max-width: 720px; margin: 0 auto; display: grid; gap: 48px; }
+header { display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: center; padding-top: 48px; }
+.ring { width: 64px; height: 64px; border-radius: 50%; border: 9px solid var(--accent); position: relative; }
+.ring::after { content: ""; position: absolute; width: 18px; height: 12px; right: -14px; top: -6px; border-radius: 8px; background: var(--accent); }
+h1, h2, h3 { font-family: var(--display); line-height: 1.15; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(1.8rem, 6vw, 2.5rem); font-weight: 700; letter-spacing: -0.02em; }
+.sub { margin: 4px 0 0; color: var(--muted); }
+nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 2; background: var(--bg); padding-block: 10px; display: flex; gap: 8px; flex-wrap: wrap; border-bottom: 1px solid var(--line); }
+nav a { font: 600 0.9rem var(--body); color: var(--fg); text-decoration: none; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); }
+nav a:hover, nav a:focus-visible { border-color: var(--accent); color: var(--accent); outline: none; }
+section { display: grid; gap: 18px; scroll-margin-top: 72px; }
+h2 { font-size: 1.6rem; font-weight: 700; }
+h3 { font-size: 1.1rem; font-weight: 500; margin-top: 10px; }
+p, ul { margin: 0; max-width: 65ch; }
+ul { padding-left: 1.2em; display: grid; gap: 8px; }
+.meta { font: 500 0.78rem var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+a { color: var(--accent); }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 0.95rem; }
+th, td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+th { font: 500 0.75rem var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+tr:last-child td { border-bottom: 0; }
+td:first-child { font-weight: 600; white-space: nowrap; }
+.note { background: var(--accent-soft); border-radius: 12px; padding: 14px 16px; max-width: 65ch; }
+.contact { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.contact code { font: 500 1rem var(--mono); user-select: all; }
+.contact button { font: 600 0.85rem var(--body); color: var(--accent); background: var(--accent-soft); border: 0; border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+.contact button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+footer { color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--line); padding-top: 18px; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="ring" aria-hidden="true"></div>
+    <div>
+      <h1>Loopwell</h1>
+      <p class="sub">Privacy policy, community guidelines and support</p>
+    </div>
+  </header>
+
+  <nav aria-label="Sections">
+    <a href="#privacy">Privacy</a>
+    <a href="#guidelines">Community guidelines</a>
+    <a href="#support">Support</a>
+  </nav>
+
+  <section id="privacy">
+    <p class="meta">Effective November 1, 2026</p>
+    <h2>Privacy policy</h2>
+    <p>Loopwell is an iPhone app for finding short-lived groups ("Loops") within 1 km of where you are, and chatting with the people there. This policy explains what Loopwell collects, why, and how long it keeps it.</p>
+
+    <h3>What we collect</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Data</th><th>Why</th><th>How long it's kept</th></tr></thead>
+        <tbody>
+          <tr><td>Email and password</td><td>To create and sign in to your account. Passwords are stored hashed by our database provider and are never visible to us.</td><td>Until you delete your account</td></tr>
+          <tr><td>Display name</td><td>Shown next to your Loops and messages.</td><td>Until you delete your account</td></tr>
+          <tr><td>Your location</td><td>Used while you're using the app to find Loops within 1 km. It's sent with each nearby search and is not saved as a history of where you've been.</td><td>Not stored, except as below</td></tr>
+          <tr><td>Loop locations</td><td>When you create a Loop, it's saved at the spot where you made it so people nearby can find it.</td><td>Loops are deleted 1 hour after they're created</td></tr>
+          <tr><td>Messages</td><td>Shown in a Loop's chat.</td><td>Deleted 15 minutes after they're sent</td></tr>
+          <tr><td>Reports and blocks</td><td>To keep people safe and review content that breaks the guidelines. A report includes a copy of what was reported.</td><td>Kept until reviewed; blocks until you delete your account</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Who can see what</h3>
+    <ul>
+      <li>Loops and their chats are visible to signed-in Loopwell users who are within 1 km of them.</li>
+      <li>Other people never see your location. Your position on the map is shown only to you.</li>
+      <li>If you block someone, you won't see their content and they won't see yours.</li>
+    </ul>
+
+    <h3>Services we use</h3>
+    <ul>
+      <li><strong>Supabase</strong> hosts Loopwell's database and accounts.</li>
+      <li><strong>Apple</strong> distributes the app and provides maps and place search on your device.</li>
+    </ul>
+    <p>Loopwell has no ads, doesn't sell your data, and doesn't track you across other apps or websites.</p>
+
+    <h3>Deleting your data</h3>
+    <p>Open the <strong>Account</strong> tab and tap <strong>Delete Account</strong>. This permanently deletes your account, display name, Loops, messages, reports you made and blocks. It can't be undone.</p>
+
+    <h3>Children</h3>
+    <p>Loopwell isn't intended for children under 13, and we don't knowingly collect data from them. If you believe a child has an account, email <strong>loopwell.support@gmail.com</strong> and we'll delete it.</p>
+
+    <h3>Changes</h3>
+    <p>If this policy changes, we'll update this page and the effective date above. Questions about privacy: <strong>loopwell.support@gmail.com</strong>.</p>
+  </section>
+
+  <section id="guidelines">
+    <h2>Community guidelines</h2>
+    <p>Everyone agrees to these rules before using Loopwell. There's no tolerance for objectionable content or abusive users.</p>
+    <ul>
+      <li>No harassment, bullying, threats or hate speech.</li>
+      <li>No sexual content, violence or illegal activity.</li>
+      <li>No spam, scams or impersonating someone else.</li>
+      <li>Don't share anyone's personal information without permission.</li>
+    </ul>
+    <p class="note">To report something, long-press a message, or use the <strong>•••</strong> menu on a Loop, and choose <strong>Report</strong>. You can also <strong>Block</strong> the person. Reports are reviewed within 24 hours; content or accounts that break these rules are removed. Anything reported by three or more people is hidden automatically until it's reviewed.</p>
+  </section>
+
+  <section id="support">
+    <h2>Support</h2>
+    <p>Questions, a problem with the app, or something to report that you can't report in the app? Email us and we'll reply within two business days.</p>
+    <div class="contact">
+      <code id="support-email">loopwell.support@gmail.com</code>
+      <button type="button" id="copy-email">Copy</button>
+    </div>
+
+    <h3>Common questions</h3>
+    <ul>
+      <li><strong>Why don't I see any Loops?</strong> Loops only appear within 1 km of you and last 1 hour. Make sure Location is allowed in Settings → Loopwell → Location, then pull down to refresh.</li>
+      <li><strong>Where did my messages go?</strong> Messages disappear 15 minutes after they're sent.</li>
+      <li><strong>How do I delete my account?</strong> Account tab → Delete Account.</li>
+    </ul>
+  </section>
+
+  <footer>Loopwell for iPhone</footer>
+</div>
+
+<script>
+  document.getElementById("copy-email").addEventListener("click", function () {
+    var text = document.getElementById("support-email").textContent;
+    var button = this;
+    function selectIt() {
+      var range = document.createRange();
+      range.selectNodeContents(document.getElementById("support-email"));
+      var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(range);
+      button.textContent = "Selected";
+    }
+    try {
+      navigator.clipboard.writeText(text).then(function () { button.textContent = "Copied"; }, selectIt);
+    } catch (e) { selectIt(); }
+  });
+</script>
+
+</body>
+</html>
